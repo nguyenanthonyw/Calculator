@@ -102,5 +102,9 @@ public class mainGUI extends JFrame {
 	JButton btnDivide = new JButton("/");
 	btnDivide.setBounds(342, 261, 86, 35);
 	contentPane.add(btnDivide);
+
+	JButton btnEquals = new JButton("=");
+	btnEquals.setBounds(21, 261, 86, 35);
+	contentPane.add(btnEquals);
     }
 }
