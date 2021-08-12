@@ -1,4 +1,6 @@
-
+/**
+ * This class is back end of the calculator
+ */
 public class util {
 
     public static String getReturnString(String old, String add) {

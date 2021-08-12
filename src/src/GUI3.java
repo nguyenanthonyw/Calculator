@@ -3,7 +3,6 @@ import javax.swing.*;
 public class GUI3 extends JFrame {
     private JPanel mainPanel;
     private JTextField textField1;
-    private JButton button1;
 
     public GUI3(String title){
         super(title);
@@ -18,4 +17,7 @@ public class GUI3 extends JFrame {
     }
 
 
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
