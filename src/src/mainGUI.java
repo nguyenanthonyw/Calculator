@@ -93,51 +93,141 @@ public class mainGUI extends JFrame {
 	contentPane.add(btnPlus);
 
 	JButton btn4 = new JButton("4");
+	btn4.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "4"));
+
+	    }
+	});
+
 	btn4.setBounds(21, 149, 86, 35);
 	contentPane.add(btn4);
 
 	JButton btn5 = new JButton("5");
+	btn5.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "5"));
+
+	    }
+	});
+
 	btn5.setBounds(128, 149, 86, 35);
 	contentPane.add(btn5);
 
 	JButton btn6 = new JButton("6");
+	btn6.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "6"));
+
+	    }
+	});
+
 	btn6.setBounds(235, 149, 86, 35);
 	contentPane.add(btn6);
 
 	JButton btnSubtract = new JButton("-");
+	btnSubtract.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "-"));
+
+	    }
+	});
 	btnSubtract.setBounds(342, 149, 86, 35);
 	contentPane.add(btnSubtract);
 
 	JButton btn1 = new JButton("1");
+	btn1.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "1"));
+
+	    }
+	});
+
 	btn1.setBounds(21, 205, 86, 35);
 	contentPane.add(btn1);
 
 	JButton btn2 = new JButton("2");
+	btn2.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "2"));
+
+	    }
+	});
 	btn2.setBounds(128, 205, 86, 35);
 	contentPane.add(btn2);
 
 	JButton btn3 = new JButton("3");
+	btn3.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "3"));
+
+	    }
+	});
 	btn3.setBounds(235, 205, 86, 35);
 	contentPane.add(btn3);
 
 	JButton btnMultiply = new JButton("x");
+	btnMultiply.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "x"));
+
+	    }
+	});
 	btnMultiply.setBounds(342, 205, 86, 35);
 	contentPane.add(btnMultiply);
 
 	JButton btn0 = new JButton("0");
+	btn0.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "0"));
+
+	    }
+	});
 	btn0.setBounds(128, 261, 86, 35);
 	contentPane.add(btn0);
 
-	JButton btnDecimal = new JButton(".");
-	btnDecimal.setBounds(235, 261, 86, 35);
-	contentPane.add(btnDecimal);
+	JButton btnClear = new JButton("C");
+	btnClear.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		// textField.setText(util.getReturnString(textField.getText(), "."));
+		textField.setText("");
+
+	    }
+	});
+	btnClear.setBounds(21, 261, 86, 35);
+	contentPane.add(btnClear);
 
 	JButton btnDivide = new JButton("/");
+	btnDivide.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "/"));
+
+	    }
+	});
 	btnDivide.setBounds(342, 261, 86, 35);
 	contentPane.add(btnDivide);
 
 	JButton btnEquals = new JButton("=");
-	btnEquals.setBounds(21, 261, 86, 35);
+	btnEquals.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "="));
+
+	    }
+	});
+
+	btnEquals.setBounds(235, 261, 86, 35);
 	contentPane.add(btnEquals);
     }
 }
