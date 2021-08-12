@@ -1,5 +1,5 @@
 /**
- * This class is back end of the calculator
+ * This class is back end of the calculator test
  */
 public class util {
 
