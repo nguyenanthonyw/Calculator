@@ -1,4 +1,7 @@
+
 import java.awt.EventQueue;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -44,18 +47,48 @@ public class mainGUI extends JFrame {
 	textField.setColumns(10);
 
 	JButton btn7 = new JButton("7");
+	btn7.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+
+		textField.setText(util.getReturnString(textField.getText(), "7"));
+	    }
+	});
 	btn7.setBounds(21, 93, 86, 35);
 	contentPane.add(btn7);
 
 	JButton btn8 = new JButton("8");
+	btn8.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		// textField.setText("8");
+		textField.setText(util.getReturnString(textField.getText(), "8"));
+
+	    }
+	});
 	btn8.setBounds(128, 93, 86, 35);
 	contentPane.add(btn8);
 
 	JButton btn9 = new JButton("9");
+	btn9.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "9"));
+
+	    }
+	});
 	btn9.setBounds(235, 93, 86, 35);
 	contentPane.add(btn9);
 
 	JButton btnPlus = new JButton("+");
+	btnPlus.addMouseListener(new MouseAdapter() {
+	    @Override
+	    public void mouseClicked(MouseEvent arg0) {
+		textField.setText(util.getReturnString(textField.getText(), "+"));
+
+	    }
+	});
+
 	btnPlus.setBounds(342, 93, 86, 35);
 	contentPane.add(btnPlus);
 
