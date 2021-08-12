@@ -1,5 +1,5 @@
 /**
- * This class is back end of the calculator test
+ * This class is back end of the calculator test test
  */
 public class util {
 
@@ -11,9 +11,8 @@ public class util {
 
     }
 
-    public static double add(double num){
-        return num;
+    public static double add(double num) {
+	return num;
     }
-
 
 }
