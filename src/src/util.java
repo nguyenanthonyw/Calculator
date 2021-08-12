@@ -11,4 +11,9 @@ public class util {
 
     }
 
+    public static double add(double num){
+        return num;
+    }
+
+
 }
