@@ -1,18 +1,33 @@
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+
 /**
  * This class is back end of the calculator test test
  */
 public class util {
 
-    public static String getReturnString(String old, String add) {
+    public static int reset;
 
-	String complete = old + add;
-
-	return complete;
+    public static void clearScreen() {
+	if (util.reset == 1) {
+	    mainGUI.textField.setText("");
+	    util.reset = 0;
+	}
 
     }
 
-    public static double add(double num) {
-	return num;
+    public static String getReturnString(String old, String add) {
+	String complete = old + add;
+	return complete;
+    }
+
+    public static String results(String string) throws ScriptException {
+	ScriptEngineManager manager = new ScriptEngineManager();
+	ScriptEngine engine = manager.getEngineByName("js");
+	Object result = engine.eval(string);
+	reset = 1;
+	return String.valueOf(result);
     }
 
 }

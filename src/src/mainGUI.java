@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.script.ScriptException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -12,7 +13,7 @@ import javax.swing.border.EmptyBorder;
 public class mainGUI extends JFrame {
 
     private JPanel contentPane;
-    private JTextField textField;
+    static JTextField textField;
 
     /**
      * Launch the application.
@@ -61,7 +62,9 @@ public class mainGUI extends JFrame {
 	btn8.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
-		// textField.setText("8");
+
+		util.clearScreen();
+
 		textField.setText(util.getReturnString(textField.getText(), "8"));
 
 	    }
@@ -73,6 +76,7 @@ public class mainGUI extends JFrame {
 	btn9.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
+		util.clearScreen();
 		textField.setText(util.getReturnString(textField.getText(), "9"));
 
 	    }
@@ -84,6 +88,7 @@ public class mainGUI extends JFrame {
 	btnPlus.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
+		util.clearScreen();
 		textField.setText(util.getReturnString(textField.getText(), "+"));
 
 	    }
@@ -96,6 +101,7 @@ public class mainGUI extends JFrame {
 	btn4.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
+		util.clearScreen();
 		textField.setText(util.getReturnString(textField.getText(), "4"));
 
 	    }
@@ -108,6 +114,7 @@ public class mainGUI extends JFrame {
 	btn5.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
+		util.clearScreen();
 		textField.setText(util.getReturnString(textField.getText(), "5"));
 
 	    }
@@ -120,6 +127,7 @@ public class mainGUI extends JFrame {
 	btn6.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
+		util.clearScreen();
 		textField.setText(util.getReturnString(textField.getText(), "6"));
 
 	    }
@@ -132,6 +140,7 @@ public class mainGUI extends JFrame {
 	btnSubtract.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
+		util.clearScreen();
 		textField.setText(util.getReturnString(textField.getText(), "-"));
 
 	    }
@@ -143,6 +152,7 @@ public class mainGUI extends JFrame {
 	btn1.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
+		util.clearScreen();
 		textField.setText(util.getReturnString(textField.getText(), "1"));
 
 	    }
@@ -155,6 +165,7 @@ public class mainGUI extends JFrame {
 	btn2.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
+		util.clearScreen();
 		textField.setText(util.getReturnString(textField.getText(), "2"));
 
 	    }
@@ -166,6 +177,7 @@ public class mainGUI extends JFrame {
 	btn3.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
+		util.clearScreen();
 		textField.setText(util.getReturnString(textField.getText(), "3"));
 
 	    }
@@ -173,11 +185,12 @@ public class mainGUI extends JFrame {
 	btn3.setBounds(235, 205, 86, 35);
 	contentPane.add(btn3);
 
-	JButton btnMultiply = new JButton("x");
+	JButton btnMultiply = new JButton("*");
 	btnMultiply.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
-		textField.setText(util.getReturnString(textField.getText(), "x"));
+		util.clearScreen();
+		textField.setText(util.getReturnString(textField.getText(), "*"));
 
 	    }
 	});
@@ -188,6 +201,7 @@ public class mainGUI extends JFrame {
 	btn0.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
+		util.clearScreen();
 		textField.setText(util.getReturnString(textField.getText(), "0"));
 
 	    }
@@ -211,6 +225,7 @@ public class mainGUI extends JFrame {
 	btnDivide.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
+		util.clearScreen();
 		textField.setText(util.getReturnString(textField.getText(), "/"));
 
 	    }
@@ -222,7 +237,14 @@ public class mainGUI extends JFrame {
 	btnEquals.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
-		textField.setText(util.getReturnString(textField.getText(), "="));
+		// textField.setText("");
+		try {
+		    textField.setText(util.results(textField.getText()));
+		} catch (ScriptException e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
+		// textField.setText(util.getReturnString(textField.getText(), "="));
 
 	    }
 	});
