@@ -237,7 +237,7 @@ public class mainGUI extends JFrame {
 	btnEquals.addMouseListener(new MouseAdapter() {
 	    @Override
 	    public void mouseClicked(MouseEvent arg0) {
-		// textField.setText("");
+
 		try {
 		    textField.setText(util.results(textField.getText()));
 		} catch (ScriptException e) {

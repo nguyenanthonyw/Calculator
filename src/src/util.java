@@ -23,9 +23,17 @@ public class util {
     }
 
     public static String results(String string) throws ScriptException {
-	ScriptEngineManager manager = new ScriptEngineManager();
-	ScriptEngine engine = manager.getEngineByName("js");
-	Object result = engine.eval(string);
+	//ScriptEngineManager manager = new ScriptEngineManager();
+	//ScriptEngine engine = manager.getEngineByName("js");
+	//Object result = engine.eval(string);
+
+		ScriptEngineManager manager = new ScriptEngineManager();
+		ScriptEngine engine = manager.getEngineByName("js");
+		System.out.println(string);
+		Object result = engine.eval(string);
+
+
+
 	reset = 1;
 	return String.valueOf(result);
     }
