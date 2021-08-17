@@ -31,19 +31,14 @@
 This program is a calculator designed to do simple arithmetic 
 
 Here's how:
-* The program takes a .xlsx file and reads the spending habits of the account
-* Use the sklearn frame work to train and test the data 
-* Use the K-neighbors to fit the model
+* The user enters the number and symbols given on the screen and the clicks on the equal sign to do the math
 
-Once it finish computing it will output the predicted and the actually results
+Once finsihed the calculator will clear the screen when entering a new problem
 
 ### Built With
 
 The program was built using the frame work listed below:
-* [NumPy](https://numpy.org/)
-* [Pandas](https://pandas.pydata.org/)
-* [Scikit-learn](https://scikit-learn.org/stable/)
-
+* [Node.js](https://nodejs.org/en/)
 
 
 <!-- GETTING STARTED -->
