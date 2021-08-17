@@ -44,41 +44,6 @@ The program was built using the frame work listed below:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Insturctions with setting up the framework
-
-### Prerequisites
-
-Required frame work
-* NumPy
-  ```sh
-  pip install numpy
-  ```
- * Pandas
-  ```sh
-  pip install pandas
-  ```
-  * sklearn 
-  ```sh
-  pip install -U scikit-learn
-  ```
-  
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/nguyenanthonyw/Faud-Detection-.git
-   ```
-2. Install packages
-   ```sh
-   numpy install
-   ```
-      ```sh
-   pandas install
-   ```
-      ```sh
-   sklearn install
-   ```
 
 
 <!-- CONTRIBUTING -->
